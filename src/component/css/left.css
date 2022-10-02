@@ -1,4 +1,39 @@
+aside{
+    position: fixed;
+    /* overflow: scroll;
+    height: 100%; */
+}
 .topList img{
-    width:28px;
+    width:26px;
     border-radius: 100%;
+}
+ul{
+    margin: 16px 10px 10px 13px ;
+}
+ul li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+     color: #e4e6eb;
+     font-weight:795;
+     padding-bottom: 14px;
+     font-size: 12px;
+     font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+}
+.topSpan{
+    padding-left: 10px;
+}
+.seeMore{
+    width: 25px;
+    height: 25px;
+    background-color: rgba(255,255,255,.1);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+.line{
+    border-bottom: 1px solid #3e4042;
+    width: 240px;
+    margin-left: 20px;
 }

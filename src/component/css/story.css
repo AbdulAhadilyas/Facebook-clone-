@@ -1,3 +1,35 @@
-.des{
+.storyBox{
+    margin: 23px;
+    height: 280px;
+    width: 36vw;
+    background-color: #242526;
+    border-radius: 2%;
+}
+
+
+.storyFlex{
+    display: flex;
+    width: 36vw;
+}
+.des{  
+    width: 36vw;
     color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+    font-size: .9rem;
+    color: #b0b3b8;
+    font-weight: 600;
+}
+.hr{
+   
+   display: flex;
+  justify-content: center;
+    align-items: center;
+}
+.line-1{
+    border-bottom: 1px solid #3e4042;
+    margin-top: 20px;
+    width: 36vw;
 }

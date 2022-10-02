@@ -1,7 +1,10 @@
 aside{
     position: fixed;
-    /* overflow: scroll;
-    height: 100%; */
+
+    height: 100vh;
+}
+aside:hover {
+    overflow: scroll;
 }
 .topList img{
     width:26px;
@@ -19,6 +22,7 @@ ul li{
      padding-bottom: 14px;
      font-size: 12px;
      font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+     height: 100%;
 }
 .topSpan{
     padding-left: 10px;
@@ -37,3 +41,54 @@ ul li{
     width: 240px;
     margin-left: 20px;
 }
+.shortCut{
+    font-size: 1.0625rem;
+    font-weight: 600;
+    word-break: break-word;
+    line-height: 1.1765;
+    color: #b0b3b8;
+    -webkit-font-smoothing: antialiased;
+    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+    margin: 16px 10px 10px 13px ;
+}
+.bottom li img{
+    width: 26px;
+    height: 26px;
+    border-radius: 25%;
+}
+.botoomSpan{
+    width: 150px;
+    font-size: .8rem;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    color: #e4e6eb;
+    padding-left: 10px;
+}
+ p{
+color: #b0b3b8;
+width: 250px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#3e4042; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3e4042; 
+  }
+
+ 

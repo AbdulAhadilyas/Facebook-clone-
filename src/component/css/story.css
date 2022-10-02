@@ -1,6 +1,6 @@
 .storyBox{
     margin: 23px;
-    height: 280px;
+    height: 45vh;
     width: 36vw;
     background-color: #242526;
     border-radius: 2%;
@@ -32,4 +32,24 @@
     border-bottom: 1px solid #3e4042;
     margin-top: 20px;
     width: 36vw;
+}
+.story-box-1{
+display: flex;
+width: 36vw;
+height: 33vh;
+margin-top: 10px;
+justify-content: center;
+
+}
+.story{
+
+    width: 8vw;
+    height: 28vh;
+margin: 8px 0px 0px 9px;
+border-radius: 10%;
+}
+.story img{
+    width: 100px;
+    height: 28vh;
+    border-radius: 10%;
 }

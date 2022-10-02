@@ -1,0 +1,96 @@
+
+nav{
+    background-color: #242526;
+    padding: 6px 10px 6px 13px;
+}
+.main{
+display: flex;
+justify-content: space-between;
+}
+.boxflex{
+    display: flex;
+}
+.logo{
+    display: flex;
+    width: 68%;
+    justify-content: space-between;
+}
+.logoIcon{
+    width: 40px;
+    height: 40px;
+}
+.input{
+    display: flex;
+    align-items: center; 
+    border-radius: 30px;
+    margin-left: 5px;
+    margin-top: 2px;
+    padding: 10px;
+    height: 16px;
+    width: 200px;
+    background-color: #3a3b3c;
+}
+.input input{
+    border: none;
+    background-color: #3a3b3c;
+    outline: none;
+    font-size: .9rem;
+    color: #b0b3b8;
+    
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #b0b3b8;
+    opacity: 1; /* Firefox */
+    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+  }
+.input svg{
+    padding-right: 5px;
+    fill: #b0b3b8;
+}
+svg{
+    fill: #b0b3b8;
+    width: 25px;
+    cursor: pointer;
+}
+.color svg{
+    fill: #2374e1;
+}
+.color{
+    border-bottom: 2px solid #2374e1;
+    width: 50px;
+}
+.flexright{
+    display: flex;
+}
+.icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 458px;
+    padding-top: 5px;
+}
+.right{
+    display: flex;
+    align-items: center;
+    margin-right: 6px;
+}
+.right img{
+    width: 35px;
+    border-radius: 100%;
+}
+.rightIconBox{
+    padding-left: 9px;
+}
+.circle{
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255,255,255,.1);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+.circle svg{
+    font-size: 1.2rem;
+    fill: #e4e6eb;
+}

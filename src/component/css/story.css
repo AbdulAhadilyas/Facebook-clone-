@@ -3,7 +3,7 @@
     height: 45vh;
     width: 36vw;
     background-color: #242526;
-    border-radius: 2%;
+    border-radius: 3%;
 }
 
 
@@ -53,3 +53,34 @@ border-radius: 10%;
     height: 28vh;
     border-radius: 10%;
 }
+
+.create-story-input{
+    display: flex;
+    align-items: center; 
+    border-radius: 30px;
+    margin-left: 5px;
+    margin-top: 2px;
+    padding: 10px;
+    height: 16px;
+    width: 200px;
+    background-color: #3a3b3c;
+}
+.create-story-input input{
+    border: none;
+    background-color: #3a3b3c;
+    outline: none;
+    font-size: .9rem;
+    color: #b0b3b8;
+    
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #b0b3b8;
+    opacity: 1; /* Firefox */
+    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+  }
+  .createPost{
+    width: 36vw;
+    background-color: #242526;
+    border-radius: 3%;
+    margin-top: 25px;
+  }

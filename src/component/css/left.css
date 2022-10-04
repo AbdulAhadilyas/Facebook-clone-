@@ -1,7 +1,7 @@
 aside{
     position: fixed;
-
     height: 100vh;
+    top: 50px;
 }
 aside:hover {
     overflow: scroll;

@@ -1,13 +1,12 @@
 .storyBox{
-  margin-top: 20px;
+  margin-top: 65px;
   background-color: #242526;
   border-radius: 2.5%;
-  width: 480px;
+  width: 450px;
 }
 
 .storyFlex {
   display: flex;
-
 }
 .des {
   width: 36vw;

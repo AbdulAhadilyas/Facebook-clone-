@@ -18,7 +18,7 @@ function App() {
         <div className="box">
           <Side />
         </div>
-        <div>
+        <div className='center-wall'>
               <Story />
               <Creatpost/>
               <Post />

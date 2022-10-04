@@ -1,9 +1,10 @@
 .createPost {
-    width: 36vw;
+    width: 360px;
     height: 20vh;
     background-color: #242526;
     border-radius:  2.5%;;
     margin-top: 25px;
+    width: 450px;
   }
   .input-box {
     display: flex;

@@ -1,0 +1,16 @@
+.post-clone{
+    margin-top: 20px;
+    background-color: #242526;
+    border-radius: 2.5%;
+}
+
+.profile{
+    display: flex;
+    padding: 15px 0px 9px 15px;
+}
+.profile img{
+    border-radius: 100%;
+}
+.post-img img{
+    width: 400px;
+}

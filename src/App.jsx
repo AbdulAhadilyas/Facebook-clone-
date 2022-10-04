@@ -3,6 +3,7 @@ import Nav from './component/nav'
 import Side from './component/left'
 import Story from './component/story'
 import Right from './component/right'
+import Creatpost from './component/createpost'
 import Post from './component/post'
 
 
@@ -17,12 +18,10 @@ function App() {
         <div className="box">
           <Side />
         </div>
-        <div className="box">
-        <div className="story-box">
-    <Story />
-    </div>
-          <Post />
-  
+        <div>
+              <Story />
+              <Creatpost/>
+              <Post />
         </div>
 
         <div className="box1">

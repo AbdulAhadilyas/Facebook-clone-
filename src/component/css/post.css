@@ -64,7 +64,7 @@
   height: 60px;
 }
 .footer-line{
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #45474a;
   width: 94%;
   display: flex;
 margin: 5px auto 0px auto;
@@ -105,10 +105,19 @@ margin: 5px auto 0px auto;
 .footer-icon-flex{
   display: flex;
   justify-content: space-evenly;
-  
-
-
+  margin-top: 6px;
+  align-items: center;
+  text-align: center;
 }
 .footer-icon{
   display: flex;
+  
+}
+.footer-icon-cap{
+  font-family: Segoe UI Historic, Segoe UI, Helvetica,;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: .89rem;;
+  color: #b0b3b8;
+  padding-left: 8px;
+  font-weight: 600;
 }

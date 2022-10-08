@@ -22,6 +22,10 @@ function App() {
               <Story />
               <Creatpost/>
               <Post />
+              <Post />
+              <Post />
+              <Post />
+              
         </div>
 
         <div className="box1">

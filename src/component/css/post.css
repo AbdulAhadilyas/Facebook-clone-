@@ -39,3 +39,27 @@
 .post-img img {
   width: 450px;
 }
+.footer-flex-1{
+  display: flex;
+  margin-top: 8px;
+  margin-left: 20px;
+}
+.footer-like-name{
+  display: flex;
+  color: #e4e6eb;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+.like-name{
+  padding-right: 0px;
+}
+.padding{
+  padding-left: 10px;
+}
+.post-footer{
+  height: 60px;
+}
+.footer-line{
+  
+}

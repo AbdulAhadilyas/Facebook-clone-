@@ -12,27 +12,12 @@ import Post from './component/post'
 function App() {
   return (
 
-    <>
-      <Nav />
-      <div className="flexbox">
-        <div className="box">
-          <Side />
-        </div>
-        <div className='center-wall'>
-              <Story />
-              <Creatpost/>
-              <Post />
-              <Post />
-              <Post />
-              <Post />
-              
-        </div>
 
-        <div className="box1">
+  
+
+        <div className="right-fixd">
           <Right />
         </div>
-      </div>
-    </>
   );
 }
 

@@ -1,0 +1,49 @@
+.addimg img{
+    width: 20px;
+}
+.right1 {
+    margin-left: 78%;
+    position: fixed;
+    margin-top: 5%;
+
+}
+
+.p1 {
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 15px;
+    color: var(--bg-color);
+}
+
+
+
+.bd2 {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.bd span {
+    color: gray;
+}
+
+.bd img {
+    height: 25px;
+    width: auto;
+}
+
+.pages {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.contacts div {
+    display: flex;
+    padding-left: 15px;
+}
+
+.contacts img {
+    height: 35px;
+    border-radius: 20px;
+}

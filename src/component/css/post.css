@@ -3,6 +3,7 @@
   background-color: #242526;
   border-radius: 2.5%;
   width: 450px;
+
 }
 :root{
   --filter-secondary-icon: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg) brightness(90%) contrast(96%);

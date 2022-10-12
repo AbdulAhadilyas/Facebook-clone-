@@ -1,49 +1,46 @@
-.addimg img{
-    width: 20px;
-}
-.right1 {
-    margin-left: 78%;
+.right-main{
+    border: 1px solid red;
+    max-width: 300px;
+    height: 100vh;
     position: fixed;
-    margin-top: 5%;
-
+    margin-left: 77%;
+    top: 43px;
+    width: 100%;
 }
-
-.p1 {
-    font-weight: 600;
-    font-size: 18px;
-    padding-left: 15px;
-    color: var(--bg-color);
+.add-img img{
+    width: 100px;
+    border-radius: 10%;
+ 
 }
-
-
-
-.bd2 {
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-}
-
-.bd span {
-    color: gray;
-}
-
-.bd img {
-    height: 25px;
-    width: auto;
-}
-
-.pages {
-    padding-left: 20px;
+.add-img{
     display: flex;
     align-items: center;
 }
-
-.contacts div {
+.top-add{
     display: flex;
-    padding-left: 15px;
 }
-
-.contacts img {
-    height: 35px;
-    border-radius: 20px;
+.sposor{
+    padding-top: 20px;
+ font-size: .95em;
+ font-weight: 600;
+ color: #b0b3b8;
+ padding-bottom: 15px;
+}
+.txt{
+    padding:5px 0px 5px 10px  ;
+}
+.add-span{
+    display: flex;
+   color: #e4e6eb;
+   font-size: .9375rem;
+   width: 120px;
+   font-weight: bold;
+}
+.add-span1{
+    display: flex;
+    color: #b0b3b8;
+    font-size: .8rem;
+}
+.addline{
+    padding-top: 200px;
 }

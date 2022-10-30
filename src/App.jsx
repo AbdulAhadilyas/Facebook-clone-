@@ -32,16 +32,17 @@ function App() {
   }
   const handleShow = () => {
       setShow(true);
-      console.log("hello")
   }
   const  handleHide = () =>{
     setShow(false);
   }  
 
 
-  const submitForm = (event) =>{
-   event.preventDefault()
-   console.log(inputTxt)
+  const submitForm = (e) =>{
+    e.preventDefault()
+    console.log(inputTxt)
+    setShow(false);
+    createPost()
   }
 
   // const postInput = (event) =>{
@@ -50,7 +51,7 @@ function App() {
   const createPost = async () => {
     try {
       const docRef = await addDoc(collection(db, "posts"), {
-        postTxt: "hello world ",
+        postTxt: inputTxt,
         postUrl: "Lovelace",
         date: 1815
       });
@@ -81,7 +82,6 @@ function App() {
            gettingInput={(e)=> setInputTxt(e.target.value)}
             submitForm={submitForm} 
             show={show} 
-            sharePost={sharePost}
             handleShow={handleShow}
             hide={handleHide}
           />

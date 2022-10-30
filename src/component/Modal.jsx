@@ -24,7 +24,7 @@ function ModalWin(props) {
           <Button variant="secondary" onClick={props.hide}>
             Close
           </Button>
-          <Button variant="primary" onClick={props.sharePost}>
+          <Button variant="primary" onClick={props.submitForm}>
             Save Changes
           </Button>
         </Modal.Footer>

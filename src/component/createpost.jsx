@@ -40,7 +40,7 @@ const Createpost = (props) => {
 
 
         </div>
-            <ModalWin show={props.show} sharePost={props.sharePost} getInput={props.gettingInput} submitForm={props.submitForm} hide={props.hide}/>
+            <ModalWin show={props.show}  getInput={props.gettingInput} submitForm={props.submitForm} hide={props.hide}/>
             <div>
 
             </div>

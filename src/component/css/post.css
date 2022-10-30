@@ -20,11 +20,12 @@ width: 477px
 .profile-name-center {
   padding-left: 7px;
 }
-.profile-name-center p {
+.profile-name-center > p {
   color: #e4e6eb;
   font-weight: 600;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 15px;
+  margin: 0;
 }
 .post-round-circle {
   position: relative;
@@ -40,8 +41,14 @@ width: 477px
 .profile img {
   border-radius: 100%;
 }
+.post-img{  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .post-img img {
-  width: 450px;
+  width: 466px;
+  
 }
 .footer-flex-1{
   display: flex;

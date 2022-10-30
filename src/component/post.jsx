@@ -20,7 +20,7 @@ const Post = () => {
                     </div>
                 </div>
                 <div className="post-img">
-                    <img src="https://scontent.fkhi2-3.fna.fbcdn.net/v/t39.30808-6/310281605_1235456683973952_5652322539676850861_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=VogqI6EMvIAAX_KR9zv&_nc_ht=scontent.fkhi2-3.fna&oh=00_AT8fDayObskBskdvL10cskiuNS-_e-yB-4XFs0GMhiSa0A&oe=6345E0A9" alt="" />
+                    <img src="https://scontent.fkhi2-3.fna.fbcdn.net/v/t39.30808-6/311906078_1010893233645419_6763118597383818412_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_ohc=ojWaVyYZSaoAX_a9Jgr&_nc_ht=scontent.fkhi2-3.fna&oh=00_AfBxOtQnf6apN30rPUldXtZ3W2r8C7KdrCvCiKzIsg-mRA&oe=63639612" alt="" />
                 </div>
                 <div className="post-footer">
                     <div className='post-footer-border'>

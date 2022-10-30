@@ -6,13 +6,8 @@ import ModalWin from "./Modal"
 
 
 
-const Createpost = () => {
-    const [show, setShow] = useState(false)
-    const handleClose = () => setShow(false);
-    const handleShow = () => {
-        setShow(true);
-        console.log("hello")
-    }
+const Createpost = (props) => {
+
     return (
         <>    <div className="createPost">
             <div className="input-box">
@@ -20,7 +15,7 @@ const Createpost = () => {
                     <img src={Profile} alt="" />
                 </div>
                 <div className="create-story-input" >
-                    <input type="text" placeholder="What's on your mind Ahad?" onClick={handleShow} />
+                    <input type="text" placeholder="What's on your mind Ahad?" onClick={props.handleShow} />
                 </div>
             </div>
             <div className="line widt"></div>
@@ -45,7 +40,7 @@ const Createpost = () => {
 
 
         </div>
-            <ModalWin show={show} hide={handleClose} />
+            <ModalWin show={props.show} sharePost={props.sharePost} getInput={props.gettingInput} submitForm={props.submitForm} hide={props.hide}/>
             <div>
 
             </div>

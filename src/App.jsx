@@ -7,6 +7,7 @@ import Creatpost from './component/createpost'
 import Post from './component/post'
 import { initializeApp } from "firebase/app";
 import { getFirestore , collection, addDoc} from "firebase/firestore";
+import { useState } from 'react';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBXUPy0up4pR4u3wm1oBbdMXmNVh4sYt2Q",
@@ -23,7 +24,29 @@ function App() {
   const app = initializeApp(firebaseConfig);
 
   const db = getFirestore(app);
+  const [inputTxt , setInputTxt] = useState("")
 
+  const [show, setShow] = useState(false)
+  const sharePost = () => {
+      setShow(false);
+  }
+  const handleShow = () => {
+      setShow(true);
+      console.log("hello")
+  }
+  const  handleHide = () =>{
+    setShow(false);
+  }  
+
+
+  const submitForm = (event) =>{
+   event.preventDefault()
+   console.log(inputTxt)
+  }
+
+  // const postInput = (event) =>{
+  //   setInputTxt(event.target.value)
+  // }
   const createPost = async () => {
     try {
       const docRef = await addDoc(collection(db, "posts"), {
@@ -35,6 +58,7 @@ function App() {
     } catch (e) {
       console.error("Error adding document: ", e);
     }
+    console.log("click")
   }
 
 
@@ -50,10 +74,19 @@ function App() {
         <Side />
       </div>
       <div className="center">
-        <div className="postItem">
+        <div className="postItem">'
+          
           <Story />
-          <Creatpost />
+          <Creatpost 
+           gettingInput={(e)=> setInputTxt(e.target.value)}
+            submitForm={submitForm} 
+            show={show} 
+            sharePost={sharePost}
+            handleShow={handleShow}
+            hide={handleHide}
+          />
           <Post />
+
         </div>
       </div>
       <div className="right-fixed">

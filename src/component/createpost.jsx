@@ -6,7 +6,7 @@ import ModalWin from "./Modal"
 
 
 
-const Createpost = (props) => {
+const Createpost = ({show,submitForm,hide,handleShow}) => {
 
     return (
         <>    <div className="createPost">
@@ -15,7 +15,7 @@ const Createpost = (props) => {
                     <img src={Profile} alt="" />
                 </div>
                 <div className="create-story-input" >
-                    <input type="text" placeholder="What's on your mind Ahad?" onClick={props.handleShow} />
+                    <input type="text" placeholder="What's on your mind Ahad?" onClick={handleShow} />
                 </div>
             </div>
             <div className="line widt"></div>
@@ -40,7 +40,11 @@ const Createpost = (props) => {
 
 
         </div>
-            <ModalWin show={props.show}  getInput={props.gettingInput} submitForm={props.submitForm} hide={props.hide}/>
+            <ModalWin 
+             show={show}
+             submitForm={submitForm} 
+             hide={hide}
+             />
             <div>
 
             </div>

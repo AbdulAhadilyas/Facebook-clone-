@@ -9,14 +9,17 @@ body{
 
   height: 100vh;
 }
-/* .flexbox{
+
+.flexbox{
   display: flex;
-  justify-content: space-between;
- 
 }
-.center-wall{
-width: 50%;
-display: flex;
-flex-direction: column;
-align-items: center;
-} */
+
+.right-fixed{
+  position: fixed;
+  left: 80%;
+  top: 52px;
+}
+.center{
+  display: flex;
+  justify-content: center;
+}

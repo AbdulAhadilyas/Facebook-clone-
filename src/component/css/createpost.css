@@ -4,7 +4,7 @@
     background-color: #242526;
     border-radius:  2.5%;;
     margin-top: 25px;
-    width: 450px;
+    width: 477px;
   }
   .input-box {
     display: flex;
@@ -22,7 +22,7 @@
     margin-left: 5px;
     margin-top: 2px;
     padding: 10px;
-    height: 16px;
+    height: 35px;
     width: 350px;
     background-color: #3a3b3c;
   }

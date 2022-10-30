@@ -15,7 +15,9 @@ export default function right() {
                     </div>
                 </div>
             </div>
-        <hr  className='addline'/>
+        <span className='add-line'></span>
+        <h2 className='Birthdays'>Birthdays</h2>
+
         </div>
     </div>
   )

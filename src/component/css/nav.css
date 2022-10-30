@@ -30,7 +30,7 @@ justify-content: space-between;
     margin-left: 5px;
     margin-top: 2px;
     padding: 10px;
-    height: 16px;
+    height: 35px;
     width: 200px;
     background-color: #3a3b3c;
 }
@@ -40,7 +40,7 @@ justify-content: space-between;
     outline: none;
     font-size: .9rem;
     color: #b0b3b8;
-    
+    width: 100px; 
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #b0b3b8;

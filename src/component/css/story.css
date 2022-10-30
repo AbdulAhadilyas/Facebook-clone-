@@ -2,9 +2,8 @@
   margin-top: 65px;
   background-color: #242526;
   border-radius: 2.5%;
-  width: 450px;
+  width: 477px;
   height: 260px;
-  
 }
 
 .storyFlex {
@@ -37,6 +36,7 @@
   height: 33vh;
   margin-top: 10px;
   justify-content: center;
+
 }
 .story {
   width: 8vw;
@@ -48,4 +48,5 @@
   width: 100px;
   height: 175px;
   border-radius: 10%;
+
 }

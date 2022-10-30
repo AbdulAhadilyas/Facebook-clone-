@@ -1,13 +1,12 @@
 .right-main{
     border: 1px solid red;
-    max-width: 300px;
+    width: 300px;
     height: 100vh;
-    position: fixed;
-    margin-left: 77%;
-    top: 43px;
-    width: 100%;
+    /* position: fixed; */
+/* 
+    top: 43px; */
 }
-.add-img img{
+/* .add-img img{
     width: 100px;
     border-radius: 10%;
  
@@ -41,6 +40,12 @@
     color: #b0b3b8;
     font-size: .8rem;
 }
-.addline{
-    padding-top: 200px;
+.add-line{
+   
+    border-bottom: 1px solid #3e4042;
+    width: 90%;
+    margin-top: 30px;
 }
+.Birthdays{
+    
+} */

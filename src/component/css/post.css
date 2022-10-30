@@ -30,13 +30,20 @@ width: 477px
 .post-round-circle {
   position: relative;
   top: 21px;
-  left: 92px;
+  left: 267px;
 }
 .profile-name-center small {
   font-weight: 400;
   font-size: 0.7rem;
   font-family: Helvetica, Arial, sans-serif;
   color: #9b9898;
+}
+
+.postTxt{
+  width: 460px;
+  color: #b0b3b8;
+  padding-left: 20px;
+  color: #e4e6eb;
 }
 .profile img {
   border-radius: 100%;

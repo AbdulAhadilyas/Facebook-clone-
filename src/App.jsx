@@ -6,8 +6,13 @@ import Right from './component/right'
 import Creatpost from './component/createpost'
 import Post from './component/post'
 import { initializeApp } from "firebase/app";
-import { getFirestore , collection, addDoc} from "firebase/firestore";
-import { useState } from 'react';
+import { getFirestore ,
+   collection, 
+   addDoc,serverTimestamp,
+   query, 
+   unsubscribe,
+    onSnapshot} from "firebase/firestore";
+import { useState ,useEffect} from 'react';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBXUPy0up4pR4u3wm1oBbdMXmNVh4sYt2Q",
@@ -25,11 +30,10 @@ function App() {
 
   const db = getFirestore(app);
   const [inputTxt , setInputTxt] = useState("")
+  const [post , setPost] = useState([])
 
   const [show, setShow] = useState(false)
-  const sharePost = () => {
-      setShow(false);
-  }
+
   const handleShow = () => {
       setShow(true);
   }
@@ -45,26 +49,41 @@ function App() {
     createPost()
   }
 
-  // const postInput = (event) =>{
-  //   setInputTxt(event.target.value)
-  // }
   const createPost = async () => {
     try {
       const docRef = await addDoc(collection(db, "posts"), {
         postTxt: inputTxt,
-        postUrl: "Lovelace",
-        date: 1815
+        postUrl: "",
+        date:serverTimestamp()
       });
       console.log("Document written with ID: ", docRef.id);
     } catch (e) {
       console.error("Error adding document: ", e);
     }
-    console.log("click")
+    console.log("post",post)
   }
 
-  
 
 
+    
+    
+
+useEffect(() => {
+
+  let unsubscribe = null;
+  const getRealtimeData = async () => {
+    const q = query(collection(db, "posts"));
+    unsubscribe = onSnapshot(q, (querySnapshot) => {
+      const posts = [];
+      querySnapshot.forEach((doc) => {
+        posts.unshift({ id: doc.id, ...doc.data()});
+      });
+      console.log("posts: ", posts);
+      setPost(posts)
+    });
+  }
+  getRealtimeData();
+}, [])
 
   return (
 
@@ -81,13 +100,20 @@ function App() {
           
           <Story />
           <Creatpost 
-           gettingInput={(e)=> setInputTxt(e.target.value)}
+            getInput={(e)=> setInputTxt(e.target.value)}
             submitForm={submitForm} 
             show={show} 
             handleShow={handleShow}
             hide={handleHide}
           />
-          <Post />
+
+          {post.map((postData ,i)=>(
+            <div key={i}>
+             <Post postTxt={postData?.postTxt} date={postData?.date?.seconds } />
+             </div>
+          ))
+         
+}
 
         </div>
       </div>

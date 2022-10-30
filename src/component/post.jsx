@@ -1,26 +1,28 @@
 import './css/post.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faThumbsUp, faComment, faShare } from '@fortawesome/free-solid-svg-icons'
+import moment from 'moment/moment';
 
 
-const Post = () => {
+const Post = ({postTxt,postImg,date,keyValue}) => {
     return (
         <>
-            <div className="post-clone">
+            <div className="post-clone" key={keyValue} >
                 <div className="post-top-flex">
                     <div className="profile">
                         <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/7QCEUGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAGgcAigAYkZCTUQwYTAwMGE2YjAxMDAwMGI4MDEwMDAwMGEwMjAwMDAzYjAyMDAwMDc4MDIwMDAwZTYwMjAwMDAzMTAzMDAwMDYyMDMwMDAwOTUwMzAwMDBjYzAzMDAwMDNjMDQwMDAwAP/bAEMABgQFBgUEBgYFBgcHBggKEAoKCQkKFA4PDBAXFBgYFxQWFhodJR8aGyMcFhYgLCAjJicpKikZHy0wLSgwJSgpKP/bAEMBBwcHCggKEwoKEygaFhooKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKP/CABEIACgAKAMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAAABgIFBwT/xAAXAQEBAQEAAAAAAAAAAAAAAAACAQAD/9oADAMBAAIQAxAAAAHynePq0xjv81HnAtcQ9VpSTNZy7PPxEpwqunCKND5//8QAHhAAAQUAAgMAAAAAAAAAAAAAAwECBAUQABESEyL/2gAIAQEAAQUC4mLoRuI4sLpZEYoUypVgRwlYKssJKmDkBvtCDpz7mGGPDyvd4LG+jXZEIzn/xAAaEQACAwEBAAAAAAAAAAAAAAABAgAQEQMx/9oACAEDAQE/AZo3KwnydlBYNSxq/8QAGhEAAgIDAAAAAAAAAAAAAAAAAREAEAMhQf/aAAgBAgEBPwERadMdmMlKjBX/xAAoEAACAQIDBgcAAAAAAAAAAAABAhEAAxAhQQQSEyIyYSAjMVGxwfD/2gAIAQEABj8C8QVBJoW7RD3h1gH0qbixjxCPNYQg+6cvnuNkNZ/TR5YGOocAx3p9kKLwQAwOtE2t6ctcdm7k0T7cvzXUcmYRh//EACIQAQABBAEDBQAAAAAAAAAAAAERABAhQVExYYEgkaGx8f/aAAgBAQABPyH1aY3wBTlucg48VIQLm5Wh4XE36p4pAEDyZ60FXMEZ73LMyNHT9rB8TdSmGfeoKEsGW7+QH4KiAaS7SihDFC6sNv/aAAwDAQACAAMAAAAQ7C8vj8ih8//EABoRAAEFAQAAAAAAAAAAAAAAAAEAEBExUSH/2gAIAQMBAT8QKimPWkbRgjAGuqt//8QAGxEBAAICAwAAAAAAAAAAAAAAAQAQETEhUWH/2gAIAQIBAT8QjJwHFAeIBF7a1m9f/8QAHxABAQACAQUBAQAAAAAAAAAAAREAITEQQVFhgXHR/9oACAEBAAE/EMGTDOqAJAaq8Ysl09K8fMQfdwnSo3s3zx1CjBXlGxN3h2XAoR8oB1HguYjlv9uTR3e+OoUERGqUKsANIH7ksIMpuNXIR774U0VpFge2+rmNfeH+GChoU+Avwp8MssC+wHb729P/2Q==" alt="" />
                         <div className='profile-name-center'>
-                            <p className='profile-name'>Anas Jawed</p>
-                            <small>19h</small>
+                            <p className='profile-name'>Ahad Ilyas</p>
+                            <small>{moment(date * 1000).fromNow() ?  moment(date * 1000).fromNow(): ""}</small>
                         </div>
                     </div>
                     <div className="post-round-circle">
-                        <svg fill="currentColor" viewBox="0 0 20 20" width="1em" height="1em" class="x1lliihq x1k90msu x2h7rmj x1qfuztq xcza8v6 x1qx5ct2 xw4jnvo"><g fill-rule="evenodd" transform="translate(-446 -350)"><path d="M458 360a2 2 0 1 1-4 0 2 2 0 0 1 4 0m6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-12 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0"></path></g></svg>
+                        <svg fill="currentColor" viewBox="0 0 20 20" width="1em" height="1em" className="x1lliihq x1k90msu x2h7rmj x1qfuztq xcza8v6 x1qx5ct2 xw4jnvo"><g fillRule="evenodd" transform="translate(-446 -350)"><path d="M458 360a2 2 0 1 1-4 0 2 2 0 0 1 4 0m6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-12 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0"></path></g></svg>
                     </div>
                 </div>
+                <div className="postTxt">
+                    <p>{postTxt}</p>
+                </div>
                 <div className="post-img">
-                    <img src="https://scontent.fkhi2-3.fna.fbcdn.net/v/t39.30808-6/311906078_1010893233645419_6763118597383818412_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_ohc=ojWaVyYZSaoAX_a9Jgr&_nc_ht=scontent.fkhi2-3.fna&oh=00_AfBxOtQnf6apN30rPUldXtZ3W2r8C7KdrCvCiKzIsg-mRA&oe=63639612" alt="" />
+                    <img src={postImg} alt="" />
                 </div>
                 <div className="post-footer">
                     <div className='post-footer-border'>
@@ -48,15 +50,15 @@ const Post = () => {
                     <div className='footer-line'></div>
                     <div className="footer-icon-flex">
                     <div className="footer-icon">
-                        <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1" ></i>
+                        <i data-visualcompletion="css-img" className="x1b0d499 x1d69dk1" ></i>
                         <span className='footer-icon-cap'>Like</span>
                     </div>
                     <div className="footer-icon">
-                        <i data-visualcompletion="css-img" class="x1b0d4991 x1d69dk1" ></i>
+                        <i data-visualcompletion="css-img" className="x1b0d4991 x1d69dk1" ></i>
                         <span className='footer-icon-cap'>Comment</span>
                     </div>
                     <div className="footer-icon">
-                        <i data-visualcompletion="css-img" class="x1b0d4992 x1d69dk1" ></i>
+                        <i data-visualcompletion="css-img" className="x1b0d4992 x1d69dk1" ></i>
                         <span className='footer-icon-cap'>Share</span>
                     </div>
                     </div>

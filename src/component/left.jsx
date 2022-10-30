@@ -10,7 +10,7 @@ return(
         <li className='topList'><img src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/PrjLkDYpYbH.png" alt="" /><span className='topSpan'> Groups </span></li>
         <li className='topList'><img src="https://static.xx.fbcdn.net/rsrc.php/v3/yU/r/D2y-jJ2C_hO.png" alt="" /><span className='topSpan'> Marketplace</span></li>
         <li className='topList'><img src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/duk32h44Y31.png" alt="" /><span className='topSpan'>Watch</span></li>
-        <li className='topList'><span className='seeMore'><svg fill="currentColor" viewBox="0 0 16 16" width="1em" height="1em" class="b6ax4al1 m4pnbp5e somyomsx ahndzqod g8r5yzqk dmdr2h6l kgzac55p"><g fill-rule="evenodd" transform="translate(-448 -544)"><path fill-rule="nonzero" d="M452.707 549.293a1 1 0 0 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L456 552.586l-3.293-3.293z"></path></g></svg></span><span className='topSpan'>See more</span></li>
+        <li className='topList'><span className='seeMore'><svg fill="currentColor" viewBox="0 0 16 16" width="1em" height="1em" className="b6ax4al1 m4pnbp5e somyomsx ahndzqod g8r5yzqk dmdr2h6l kgzac55p"><g fillRule="evenodd" transform="translate(-448 -544)"><path fillRule="nonzero" d="M452.707 549.293a1 1 0 0 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L456 552.586l-3.293-3.293z"></path></g></svg></span><span className='topSpan'>See more</span></li>
     </ul>
 
     <div className="line"></div>

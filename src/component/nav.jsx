@@ -15,10 +15,10 @@ function Nav() {
               viewBox="0 0 16 16"
               width="1em"
               height="1em"
-              class="b6ax4al1 m4pnbp5e somyomsx ahndzqod gnhxmgs4 eohcrkr5 akh3l2rg"
+              className="b6ax4al1 m4pnbp5e somyomsx ahndzqod gnhxmgs4 eohcrkr5 akh3l2rg"
             >
-              <g fill-rule="evenodd" transform="translate(-448 -544)">
-                <g fill-rule="nonzero">
+              <g fillRule="evenodd" transform="translate(-448 -544)">
+                <g fillRule="nonzero">
                   <path
                     d="M10.743 2.257a6 6 0 1 1-8.485 8.486 6 6 0 0 1 8.485-8.486zm-1.06 1.06a4.5 4.5 0 1 0-6.365 6.364 4.5 4.5 0 0 0 6.364-6.363z"
                     transform="translate(448 544)"
@@ -45,7 +45,7 @@ function Nav() {
             <li className="iconBox color">
               <svg
                 viewBox="0 0 28 28"
-                class="b6ax4al1 m4pnbp5e somyomsx ahndzqod p9vk499z"
+                className="b6ax4al1 m4pnbp5e somyomsx ahndzqod p9vk499z"
                 fill="currentColor"
                 height="28"
                 width="28"
@@ -56,7 +56,7 @@ function Nav() {
             <li className="iconBox">
               <svg
                 viewBox="0 0 28 28"
-                class="b6ax4al1 m4pnbp5e somyomsx ahndzqod gnhxmgs4"
+                className="b6ax4al1 m4pnbp5e somyomsx ahndzqod gnhxmgs4"
                 fill="currentColor"
                 height="28"
                 width="28"
@@ -68,7 +68,7 @@ function Nav() {
             <li className="iconBox">
               <svg
                 viewBox="0 0 28 28"
-                class="b6ax4al1 m4pnbp5e somyomsx ahndzqod gnhxmgs4"
+                className="b6ax4al1 m4pnbp5e somyomsx ahndzqod gnhxmgs4"
                 fill="currentColor"
                 height="28"
                 width="28"
@@ -80,7 +80,7 @@ function Nav() {
             <li className="iconBox">
               <svg
                 viewBox="0 0 28 28"
-                class="b6ax4al1 m4pnbp5e somyomsx ahndzqod gnhxmgs4"
+                className="b6ax4al1 m4pnbp5e somyomsx ahndzqod gnhxmgs4"
                 fill="currentColor"
                 height="28"
                 width="28"
@@ -92,7 +92,7 @@ function Nav() {
             <li className="iconBox">
               <svg
                 viewBox="0 0 28 28"
-                class="b6ax4al1 m4pnbp5e somyomsx ahndzqod gnhxmgs4"
+                className="b6ax4al1 m4pnbp5e somyomsx ahndzqod gnhxmgs4"
                 fill="currentColor"
                 height="28"
                 width="28"
@@ -110,7 +110,7 @@ function Nav() {
                   viewBox="0 0 44 44"
                   width="1em"
                   height="1em"
-                  class="b6ax4al1 m4pnbp5e somyomsx ahndzqod g8r5yzqk dmdr2h6l kgzac55p"
+                  className="b6ax4al1 m4pnbp5e somyomsx ahndzqod g8r5yzqk dmdr2h6l kgzac55p"
                 >
                   <circle cx="7" cy="7" r="6"></circle>
                   <circle cx="22" cy="7" r="6"></circle>
@@ -126,7 +126,7 @@ function Nav() {
               </div>
               <li className="rightIconBox">
               <div className="circle">
-              <svg viewBox="0 0 28 28" alt="" class="b6ax4al1 m4pnbp5e somyomsx ahndzqod g8r5yzqk" fill="currentColor" height="20" width="20"><path d="M14 2.042c6.76 0 12 4.952 12 11.64S20.76 25.322 14 25.322a13.091 13.091 0 0 1-3.474-.461.956 .956 0 0 0-.641.047L7.5 25.959a.961.961 0 0 1-1.348-.849l-.065-2.134a.957.957 0 0 0-.322-.684A11.389 11.389 0 0 1 2 13.682C2 6.994 7.24 2.042 14 2.042ZM6.794 17.086a.57.57 0 0 0 .827.758l3.786-2.874a.722.722 0 0 1 .868 0l2.8 2.1a1.8 1.8 0 0 0 2.6-.481l3.525-5.592a.57.57 0 0 0-.827-.758l-3.786 2.874a.722.722 0 0 1-.868 0l-2.8-2.1a1.8 1.8 0 0 0-2.6.481Z"></path></svg>
+              <svg viewBox="0 0 28 28" alt="" className="b6ax4al1 m4pnbp5e somyomsx ahndzqod g8r5yzqk" fill="currentColor" height="20" width="20"><path d="M14 2.042c6.76 0 12 4.952 12 11.64S20.76 25.322 14 25.322a13.091 13.091 0 0 1-3.474-.461.956 .956 0 0 0-.641.047L7.5 25.959a.961.961 0 0 1-1.348-.849l-.065-2.134a.957.957 0 0 0-.322-.684A11.389 11.389 0 0 1 2 13.682C2 6.994 7.24 2.042 14 2.042ZM6.794 17.086a.57.57 0 0 0 .827.758l3.786-2.874a.722.722 0 0 1 .868 0l2.8 2.1a1.8 1.8 0 0 0 2.6-.481l3.525-5.592a.57.57 0 0 0-.827-.758l-3.786 2.874a.722.722 0 0 1-.868 0l-2.8-2.1a1.8 1.8 0 0 0-2.6.481Z"></path></svg>
               </div>
               </li>
               <li className="rightIconBox">
@@ -134,7 +134,7 @@ function Nav() {
                 <svg
                   viewBox="0 0 28 28"
                   alt=""
-                  class="b6ax4al1 m4pnbp5e somyomsx ahndzqod g8r5yzqk"
+                  className="b6ax4al1 m4pnbp5e somyomsx ahndzqod g8r5yzqk"
                   fill="currentColor"
                   height="20"
                   width="20"

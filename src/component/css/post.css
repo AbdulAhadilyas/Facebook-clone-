@@ -29,8 +29,8 @@ width: 477px
 }
 .post-round-circle {
   position: relative;
-  top: 21px;
-  left: 267px;
+  top: 1px;
+  left: 270px;
 }
 .profile-name-center small {
   font-weight: 400;
@@ -135,4 +135,118 @@ margin: 5px auto 0px auto;
   color: #b0b3b8;
   padding-left: 8px;
   font-weight: 600;
+}
+
+.drop-down .drop-btn{
+  width: 10px;
+  line-height: 55px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #b0b3b8;
+  padding: 0 20px;
+}
+
+.drop-down .tooltip{
+  height: 15px;
+  width: 15px;
+  transform: rotate(45deg);
+  display: none;
+}
+.drop-down .tooltip.show{
+  display: block;
+}
+.drop-down .wrapper{
+  position: absolute;
+  top: 65px;
+  left: -300px;
+  display: flex;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #242526;
+  display: none;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.drop-down .wrapper.show{
+  display: block;
+  display: flex;
+}
+
+
+.drop-down .wrapper{
+  position: absolute;
+  top: 65px;
+  display: flex;
+  width: 350px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #242526;
+  display: none;
+  transition: all 0.3s ease;
+}
+.drop-down .wrapper.show{
+  display: block;
+  display: flex;
+}
+
+
+
+
+.wrapper .menu-bar{
+  width: 400px;
+  list-style: none;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+.wrapper .menu-bar >li{
+  line-height: 30px;
+}
+.wrapper .menu-bar >li span{
+  position: relative;
+  color: #b0b3b8;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 10px;
+  display: flex;
+  border-radius: 8px;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.wrapper .menu-bar >li:hover span{
+  background: #3A3B3C;
+}
+.menu-bar >li> span .icon{
+  height: 40px;
+  width: 40px;
+  margin-right: 13px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  align-items: center;
+}
+.menu-bar >li> span .icon span{
+  line-height: 40px;
+  font-size: 20px;
+  color: #b0b3b8;
+}
+.menu-bar >li> span i{
+  position: absolute;
+  right: 10px;
+  font-size: 15x;
+  pointer-events: none;
+}
+.wrapper .menu-bar.setting-drop,
+.wrapper .menu-bar.help-drop{
+  display: none;
+}
+
+.wrapper .arrow>span{
+  margin-right: 15px;
+}
+.icon > svg{
+  width: 18px;
+  height: 18px;
 }

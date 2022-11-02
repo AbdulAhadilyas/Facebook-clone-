@@ -6,13 +6,14 @@ import ModalWin from "./Modal"
 
 
 
-const Createpost = ({show,submitForm,hide,handleShow,getInput}) => {
+const Createpost = ({show,submitForm,hide,handleShow,getInput ,uploadImage,setImage}) => {
 
     return (
         <>    <div className="createPost">
             <div className="input-box">
                 <div className="img">
                     <img src={Profile} alt="" />
+                  
                 </div>
                 <div className="create-story-input" >
                     <input type="text" placeholder="What's on your mind Ahad?" onClick={handleShow} />
@@ -45,6 +46,8 @@ const Createpost = ({show,submitForm,hide,handleShow,getInput}) => {
              submitForm={submitForm} 
              hide={hide}
              getInput={getInput}
+             uploadImage={uploadImage}
+             setImage={setImage}
              />
             <div>
 

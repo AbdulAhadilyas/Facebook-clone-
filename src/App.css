@@ -18,6 +18,7 @@ body{
   position: fixed;
   left: 80%;
   top: 52px;
+  display: none;
 }
 .center{
   display: flex;

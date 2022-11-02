@@ -5,14 +5,18 @@ import Story from './component/story'
 import Right from './component/right'
 import Creatpost from './component/createpost'
 import Post from './component/post'
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app"
 import { getFirestore ,
    collection, 
    addDoc,serverTimestamp,
    query, 
    unsubscribe,
-    onSnapshot} from "firebase/firestore";
+    onSnapshot,
+    orderBy,
+    deleteDoc,
+    doc} from "firebase/firestore";
 import { useState ,useEffect} from 'react';
+import axios from 'axios';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBXUPy0up4pR4u3wm1oBbdMXmNVh4sYt2Q",
@@ -31,8 +35,9 @@ function App() {
   const db = getFirestore(app);
   const [inputTxt , setInputTxt] = useState("")
   const [post , setPost] = useState([])
-
   const [show, setShow] = useState(false)
+  const [uplodImg, setUplodImg] = useState("")
+
 
   const handleShow = () => {
       setShow(true);
@@ -42,8 +47,8 @@ function App() {
   }  
 
 
-  const submitForm = (e) =>{
-    e.preventDefault()
+  const submitForm = (event) =>{
+    event.preventDefault()
     console.log(inputTxt)
     setShow(false);
     createPost()
@@ -69,10 +74,9 @@ function App() {
     
 
 useEffect(() => {
-
   let unsubscribe = null;
   const getRealtimeData = async () => {
-    const q = query(collection(db, "posts"));
+    const q = query(collection(db, "posts") ,orderBy('date' ,'asc')) ;
     unsubscribe = onSnapshot(q, (querySnapshot) => {
       const posts = [];
       querySnapshot.forEach((doc) => {
@@ -84,6 +88,35 @@ useEffect(() => {
   }
   getRealtimeData();
 }, [])
+
+
+const deletePost = async (postId) => {
+  console.log("postId: ", postId);
+  await deleteDoc(doc(db, "posts", postId));
+  console.log("click")
+}
+
+const uploadImage =(event)=>{
+  event.preventDefault()
+  console.log("clic")
+}
+ 
+  // axios.get('/user?ID=12345')
+  // .then(function (response) {
+   
+  // })
+  // .catch(function (error) {
+  //   // handle error
+  //   console.log(error);
+  // })
+  // .finally(function () {
+  //   // always executed
+  // });
+
+
+
+
+
 
   return (
 
@@ -106,15 +139,21 @@ useEffect(() => {
             handleShow={handleShow}
             hide={handleHide}
           />
-
           {post.map((postData ,i)=>(
             <div key={i}>
-             <Post postTxt={postData?.postTxt} date={postData?.date?.seconds } />
+             <Post
+             postTxt={postData?.postTxt} 
+             date={postData?.date?.seconds  } 
+             deleteThis={()=> deletePost(postData.id)} 
+             setImage={(e)=>setUplodImg(e.target.files[0])}
+             uploadImage={uploadImage}
+             />
              </div>
           ))
-         
-}
 
+       
+          
+}
         </div>
       </div>
       <div className="right-fixed">

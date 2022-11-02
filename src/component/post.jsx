@@ -1,10 +1,18 @@
 import './css/post.css'
 import moment from 'moment/moment';
+import { useState } from 'react';
 
 
-const Post = ({postTxt,postImg,date,keyValue}) => {
+const Post = ({postTxt,postImg,date,keyValue,deleteThis ,editThis}) => {
+
+    const [toggleClass , setToggleClass] = useState(false)
+const toggle = () => {
+    setToggleClass(!toggleClass)
+    console.log(toggleClass)
+}
     return (
         <>
+       
             <div className="post-clone" key={keyValue} >
                 <div className="post-top-flex">
                     <div className="profile">
@@ -14,8 +22,47 @@ const Post = ({postTxt,postImg,date,keyValue}) => {
                             <small>{moment(date * 1000).fromNow() ?  moment(date * 1000).fromNow(): ""}</small>
                         </div>
                     </div>
-                    <div className="post-round-circle">
-                        <svg fill="currentColor" viewBox="0 0 20 20" width="1em" height="1em" className="x1lliihq x1k90msu x2h7rmj x1qfuztq xcza8v6 x1qx5ct2 xw4jnvo"><g fillRule="evenodd" transform="translate(-446 -350)"><path d="M458 360a2 2 0 1 1-4 0 2 2 0 0 1 4 0m6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-12 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0"></path></g></svg>
+                    <div className="post-round-circle" >
+                    <div className=" drop-down">
+              <div className="drop-btn" onClick={toggle}>
+              <svg fill="currentColor" viewBox="0 0 20 20" width="1em" height="1em" className="x1lliihq x1k90msu x2h7rmj x1qfuztq xcza8v6 x1qx5ct2 xw4jnvo"><g fillRule="evenodd" transform="translate(-446 -350)"><path d="M458 360a2 2 0 1 1-4 0 2 2 0 0 1 4 0m6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-12 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0"></path></g></svg>
+              </div>
+              <div className={toggleClass?`tooltip show`: `tooltip`} ></div>
+              <div className={toggleClass?`wrapper show`: `wrapper`}>
+                <ul className="menu-bar">
+                 
+                  <li className="help-item" >
+                    <span onClick={ editThis } >
+                      <div className="icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          className="bi bi-pencil"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                        </svg>
+                      </div>
+                      <i className="fas fa-angle-right"></i>
+                      Edit Post
+                    </span>
+                  </li>
+                    
+                  <li className="setting-item">
+                  <span   onClick={ deleteThis }>
+                     <div className="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-trash3" viewBox="0 0 16 16">
+                           <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                         </svg>
+                     </div>
+                     Turn Off Notification  <i className="fas fa-angle-right"></i>
+                  </span>
+               </li>
+                </ul>
+              </div>
+            </div>
                     </div>
                 </div>
                 <div className="postTxt">
@@ -49,7 +96,7 @@ const Post = ({postTxt,postImg,date,keyValue}) => {
                     </div>
                     <div className='footer-line'></div>
                     <div className="footer-icon-flex">
-                    <div className="footer-icon">
+                    <div className="footer-icon" onClick={()=>(deleteThis)}>
                         <i data-visualcompletion="css-img" className="x1b0d499 x1d69dk1" ></i>
                         <span className='footer-icon-cap'>Like</span>
                     </div>
@@ -62,11 +109,13 @@ const Post = ({postTxt,postImg,date,keyValue}) => {
                         <span className='footer-icon-cap'>Share</span>
                     </div>
                     </div>
+                   
 
 
                 </div>
 
             </div>
+            
         </>
     )
 }

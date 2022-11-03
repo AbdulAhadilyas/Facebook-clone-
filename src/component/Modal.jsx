@@ -18,14 +18,14 @@ function ModalWin(props) {
         <textarea name="" id="" cols="29 " rows="10" onChange={
           props.getInput
         }></textarea>
-         </form>
 
-         <form onSubmit={props.uploadImage}>
-          <input type="file"
+<input type="file"
           onChange={props.setImage}
           />
-      
          </form>
+
+        
+       
          <button onClick={props.uploadImage} >submit</button>
         </Modal.Body>
         <Modal.Footer>

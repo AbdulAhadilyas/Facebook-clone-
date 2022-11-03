@@ -9,7 +9,8 @@ import ModalWin from "./Modal"
 const Createpost = ({show,submitForm,hide,handleShow,getInput ,uploadImage,setImage}) => {
 
     return (
-        <>    <div className="createPost">
+        <>  
+          <div className="createPost">
             <div className="input-box">
                 <div className="img">
                     <img src={Profile} alt="" />
@@ -41,16 +42,15 @@ const Createpost = ({show,submitForm,hide,handleShow,getInput ,uploadImage,setIm
 
 
         </div>
+
             <ModalWin 
              show={show}
              submitForm={submitForm} 
              hide={hide}
              getInput={getInput}
-             uploadImage={uploadImage}
              setImage={setImage}
              />
             <div>
-
             </div>
         </>
     )

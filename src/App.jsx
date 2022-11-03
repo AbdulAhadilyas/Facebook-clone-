@@ -36,7 +36,8 @@ function App() {
   const [inputTxt , setInputTxt] = useState("")
   const [post , setPost] = useState([])
   const [show, setShow] = useState(false)
-  const [uplodImg, setUplodImg] = useState("")
+  const [uplodImg, setUplodImg] = useState(null)
+  const [safeImage, setSafeImage]= useState({})
 
 
   const handleShow = () => {
@@ -46,26 +47,53 @@ function App() {
     setShow(false);
   }  
 
-
+  const arrs = []
   const submitForm = (event) =>{
     event.preventDefault()
     console.log(inputTxt)
     setShow(false);
-    createPost()
-  }
 
-  const createPost = async () => {
+    // console.log(uplodImg)
+
+    const formData = new FormData();
+    formData.append("file", uplodImg);
+    formData.append("upload_preset", "My data base cloud");
+    console.log(formData)
+  
+  
+    axios.post('https://api.cloudinary.com/v1_1/ddpky6mca/image/upload',formData)
+    .then(function (response) {
+    console.log(response.data.url)
+    setSafeImage(()=> response.data)
+
+   
+
+    createPost(response.data.url)
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
+    .finally(function () {
+      // always executed
+    })
+ 
+    
+    
+  }
+  console.log("image", safeImage)
+  const createPost = async (postUrl) => {
     try {
       const docRef = await addDoc(collection(db, "posts"), {
         postTxt: inputTxt,
-        postUrl: "",
+        postUrl: postUrl,
         date:serverTimestamp()
       });
       console.log("Document written with ID: ", docRef.id);
     } catch (e) {
       console.error("Error adding document: ", e);
     }
-    console.log("post",post)
+    // console.log("post",post)
   }
 
 
@@ -82,7 +110,7 @@ useEffect(() => {
       querySnapshot.forEach((doc) => {
         posts.unshift({ id: doc.id, ...doc.data()});
       });
-      console.log("posts: ", posts);
+      // console.log("posts: ", posts);
       setPost(posts)
     });
   }
@@ -96,22 +124,9 @@ const deletePost = async (postId) => {
   console.log("click")
 }
 
-const uploadImage =(event)=>{
-  event.preventDefault()
-  console.log("clic")
-}
+
  
-  // axios.get('/user?ID=12345')
-  // .then(function (response) {
-   
-  // })
-  // .catch(function (error) {
-  //   // handle error
-  //   console.log(error);
-  // })
-  // .finally(function () {
-  //   // always executed
-  // });
+ 
 
 
 
@@ -138,6 +153,7 @@ const uploadImage =(event)=>{
             show={show} 
             handleShow={handleShow}
             hide={handleHide}
+            setImage={(e)=> setUplodImg(e.target.files[0])}
           />
           {post.map((postData ,i)=>(
             <div key={i}>
@@ -145,8 +161,7 @@ const uploadImage =(event)=>{
              postTxt={postData?.postTxt} 
              date={postData?.date?.seconds  } 
              deleteThis={()=> deletePost(postData.id)} 
-             setImage={(e)=>setUplodImg(e.target.files[0])}
-             uploadImage={uploadImage}
+             postImg={postData?.postUrl}
              />
              </div>
           ))

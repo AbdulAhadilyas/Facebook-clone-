@@ -18,7 +18,7 @@ body{
   position: fixed;
   left: 80%;
   top: 52px;
-  display: none;
+  overflow: scroll;
 }
 .center{
   display: flex;

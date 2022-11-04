@@ -1,52 +1,108 @@
-.right-main{
-    border: 1px solid red;
-    width: 300px;
-    height: 100vh;
-    /* position: fixed; */
-/* 
-    top: 43px; */
-    
+.right-main {
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 43px;
+
 }
-/* .add-img img{
-    width: 100px;
-    border-radius: 10%;
- 
-}
-.add-img{
+
+.content_right_inner {
+    width: 70%;
+    padding-right: 10px;
+  }
+  
+  .your_pages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    color: #a1a4a9;
+  }
+  
+  .your_pages h3 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .content_right ul {
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .content_right ul li {
+    margin-bottom: 15px;
+  }
+  
+  .content_right ul li a {
+    text-decoration: none;
     display: flex;
     align-items: center;
-}
-.top-add{
+    color: #e5e7eb;
+    font-weight: 500;
+  }
+  
+  .content_right ul li a img {
+    width: 37px;
+    margin-right: 10px;
+    border-radius: 100%;
+  }
+  
+  .content_right_small_text {
+    font-size: 13px;
+    color: #b0b2b6;
+    padding-top: 0;
+  }
+  
+  .content_right_small_text a {
+    padding-left: 20px;
+  }
+  
+  .content_right_small_text a i {
+    margin-right: 15px;
+  }
+  
+  .content_right_divider {
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.08);
+    border-width: 1px;
+  }
+  
+  .birthdays {
+    margin: 15px 0;
+    color: #a1a4a9;
+  }
+  
+  .birthdays h3 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .contacts {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    color: #a1a4a9;
+  }
+  
+  .contacts h3 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .contacts i {
+    margin-left: 15px;
+  }
+.birthdayTxt{
+    padding-left: 20px;
 }
-.sposor{
-    padding-top: 20px;
- font-size: .95em;
- font-weight: 600;
- color: #b0b3b8;
- padding-bottom: 15px;
+.giftbox {
+    height: 36px;
+    width: 36px;
+    background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/kYjP4abidZg.png");
+    background-position: 0px 0px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: inline-block;
 }
-.txt{
-    padding:5px 0px 5px 10px  ;
-}
-.add-span{
-    display: flex;
-   color: #e4e6eb;
-   font-size: .9375rem;
-   width: 120px;
-   font-weight: bold;
-}
-.add-span1{
-    display: flex;
-    color: #b0b3b8;
-    font-size: .8rem;
-}
-.add-line{
-   
-    border-bottom: 1px solid #3e4042;
-    width: 90%;
-    margin-top: 30px;
-}
-.Birthdays{
-    
-} */

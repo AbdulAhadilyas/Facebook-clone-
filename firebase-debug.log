@@ -1,0 +1,75 @@
+[debug] [2022-11-04T15:41:41.307Z] ----------------------------------------------------------------------
+[debug] [2022-11-04T15:41:41.310Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\AHAD\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-11-04T15:41:41.310Z] CLI Version:   11.16.0
+[debug] [2022-11-04T15:41:41.311Z] Platform:      win32
+[debug] [2022-11-04T15:41:41.311Z] Node Version:  v16.17.0
+[debug] [2022-11-04T15:41:41.312Z] Time:          Fri Nov 04 2022 20:41:41 GMT+0500 (Pakistan Standard Time)
+[debug] [2022-11-04T15:41:41.312Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-04T15:41:41.320Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-04T15:41:41.321Z] > authorizing via signed-in user (ahadjani340@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\working\Facebook-clone-
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-11-04T15:41:47.645Z] > refreshing access token with scopes: []
+[debug] [2022-11-04T15:41:47.648Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-11-04T15:41:47.648Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-04T15:41:48.056Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-11-04T15:41:48.056Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-04T15:41:48.072Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-11-04T15:41:48.831Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-11-04T15:41:48.831Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2022-11-04T15:42:41.362Z] ----------------------------------------------------------------------
+[debug] [2022-11-04T15:42:41.365Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\AHAD\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-11-04T15:42:41.365Z] CLI Version:   11.16.0
+[debug] [2022-11-04T15:42:41.365Z] Platform:      win32
+[debug] [2022-11-04T15:42:41.366Z] Node Version:  v16.17.0
+[debug] [2022-11-04T15:42:41.367Z] Time:          Fri Nov 04 2022 20:42:41 GMT+0500 (Pakistan Standard Time)
+[debug] [2022-11-04T15:42:41.367Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-04T15:42:41.375Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-04T15:42:41.376Z] > authorizing via signed-in user (ahadjani340@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\working\Facebook-clone-
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2022-11-04T15:43:21.520Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2022-11-04T15:43:21.520Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"fakeb00k","name":"fakeb00k"}
+[debug] [2022-11-04T15:43:23.194Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2022-11-04T15:43:23.194Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2022-11-04T15:43:23.513Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (C:\Users\AHAD\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\AHAD\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID fakeb00k. Please try again with a unique project ID.

@@ -14,7 +14,8 @@ import {
     onSnapshot,
     orderBy,
     deleteDoc,
-    doc
+    doc,
+    updateDoc
 } from "firebase/firestore";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -39,6 +40,10 @@ function Home() {
     const [show, setShow] = useState(false)
     const [uplodImg, setUplodImg] = useState(null)
     const [safeImage, setSafeImage] = useState(null)
+    const [isEditing, setIsEditing] = useState({
+        editingId: null,
+        editingText: ""
+    })
 
 
     const handleShow = () => {
@@ -133,6 +138,17 @@ function Home() {
         await deleteDoc(doc(db, "posts", postId));
         console.log("click")
     }
+
+    const updatePost = async (e) => {
+        e.preventDefault();
+        await updateDoc(doc(db, "posts", isEditing.editingId), {
+            postTxt: isEditing.editingText
+        });
+        setIsEditing({
+          editingId: null,
+          editingText: ""
+        })
+      }
 
 
     return (

@@ -15,7 +15,9 @@ function Nav({home , video , group}) {
       <div className="main">
         <div className="logo">
           <div className="boxflex">
+            <Link to={"/"}>
           <img src={fblogo} alt="fb logo" className="logoIcon" />
+          </Link>
           <div className="input">
             <svg
               fill="currentColor"

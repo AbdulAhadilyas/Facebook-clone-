@@ -1,9 +1,10 @@
-import Side from '../component/left'
-import Story from '../component/story'
-import Right from '../component/right'
-import Creatpost from '../component/createpost'
-import Post from '../component/post'
+import Side from '../left'
+import Story from '../story'
+import Right from '../right'
+import Creatpost from '../createpost'
+import Post from '../post'
 import { initializeApp } from "firebase/app"
+import "../../App.css"
 import {
     getFirestore,
     collection,

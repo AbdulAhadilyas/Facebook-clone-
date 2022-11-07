@@ -50,7 +50,7 @@ function Nav({home , video , group}) {
           </div>
           <div className="icon">
             <li className="iconBox color">
-              <Link to={home}>
+              <Link to={"/"}>
               <svg
                 viewBox="0 0 28 28"
                 className="b6ax4al1 m4pnbp5e somyomsx ahndzqod p9vk499z"
@@ -63,7 +63,7 @@ function Nav({home , video , group}) {
               </Link>
             </li>
             <li className="iconBox">
-            <Link to={ video}>
+            <Link to={"/video"}>
               <svg
                 viewBox="0 0 28 28"
                 className="b6ax4al1 m4pnbp5e somyomsx ahndzqod gnhxmgs4"
@@ -77,7 +77,7 @@ function Nav({home , video , group}) {
             </li>
 
             <li className="iconBox">
-            <Link to={group}>
+            <Link to={"/Group"}>
               <svg
                 viewBox="0 0 28 28"
                 className="b6ax4al1 m4pnbp5e somyomsx ahndzqod gnhxmgs4"
@@ -157,7 +157,7 @@ function Nav({home , video , group}) {
                 </div>
               </li>
               <li className="rightIconBox">
-                <img src={Profile} alt="" />
+               <Link to={"/Profile"} ><img src={Profile} alt="" /></Link>
               </li>
             </div>
         </div>

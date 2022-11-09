@@ -6,7 +6,7 @@ import ModalWin from "./Modal"
 
 
 
-const Createpost = ({show,submitForm,hide,handleShow,getInput ,uploadImage,setImage,imagePreview}) => {
+const Createpost = ({show,submitForm,hide,handleShow,getInput ,uploadImage,setImage,imagePreview ,ModalTitleCreate ,ModalTitleBtnPost}) => {
 
     return (
         <>  
@@ -50,6 +50,9 @@ const Createpost = ({show,submitForm,hide,handleShow,getInput ,uploadImage,setIm
              getInput={getInput}
              setImage={setImage}
              imagePreview={imagePreview}
+             modalTitle={ModalTitleCreate}
+             btnTxt={ModalTitleBtnPost}
+        
              />
             <div>
             </div>

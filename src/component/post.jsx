@@ -4,16 +4,17 @@ import { useState } from 'react';
 import ModalWin from "./Modal"
 
 
-const Post = ({ postTxt, postImg, date, keyValue, deleteThis, editThis }) => {
+const Post = ({ postTxt, postImg, date, keyValue, deleteThis, editThis,show, submitForm, hide, getInput, setImage }) => {
 
     const [toggleClass, setToggleClass] = useState(false)
     const toggle = () => {
         setToggleClass(!toggleClass)
         console.log(toggleClass)
     }
+  
+
     return (
         <>
-
             <div className="post-clone" key={keyValue} >
                 <div className="post-top-flex">
                     <div className="profile">
@@ -110,11 +111,16 @@ const Post = ({ postTxt, postImg, date, keyValue, deleteThis, editThis }) => {
                             <span className='footer-icon-cap'>Share</span>
                         </div>
                     </div>
-
-               
                 </div>
-
             </div>
+
+            <ModalWin
+                show={show}
+                submitForm={submitForm}
+                hide={hide}
+                getInput={getInput}
+                setImage={setImage}
+            />
 
         </>
     )

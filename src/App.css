@@ -13,7 +13,6 @@ body{
   position: fixed;
   left: 80%;
   top: 52px;
-  overflow: scroll;
 }
 .center{
   display: flex;
@@ -21,3 +20,11 @@ body{
   align-items: center;
 }
 
+@media only screen and (max-width: 1200px) {
+  aside{
+    display: none;
+  }
+  .right-main{
+    display: none;
+  }
+}

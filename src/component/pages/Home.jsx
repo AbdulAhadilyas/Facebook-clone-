@@ -41,15 +41,21 @@ function Home() {
     const [uplodImg, setUplodImg] = useState(null)
     const [safeImage, setSafeImage] = useState(null)
     const [editInputTxt, setEditInputTxt] = useState("")
-
+    const [updateTxtModal, setUpdateTxtModal] = useState(false)
      const [isEditing, setIsEditing] = useState("")
 
 
     const handleShow = () => {
         setShow(true);
     }
+    const modalShow = () => {
+        setUpdateTxtModal(true);
+    }
     const handleHide = () => {
         setShow(false);
+    }
+    const modalHide = () => {
+        setUpdateTxtModal(false);
     }
 
     const arrs = []
@@ -142,14 +148,10 @@ function Home() {
         e.preventDefault();
         await updateDoc(doc(db, "posts", isEditing), {
             postTxt:editInputTxt
-        });
-        // setIsEditing({
-        //     editingId: null,
-        //     editingText: ""
-        // })
-        handleHide()
+        })
+       modalHide()
+       
     }
-console.log(uplodImg)
     return (
 
         <>
@@ -166,7 +168,8 @@ console.log(uplodImg)
                         handleShow={handleShow}
                         hide={handleHide}
                         setImage={(e) => setUplodImg(e.target.files[0])}
-                        
+                        ModalTitleCreate={"Create Post"}
+                        ModalTitleBtnPost={"Post"}
                     />
                     {post.map((postData, i) => (
                         <div key={i}>
@@ -175,14 +178,17 @@ console.log(uplodImg)
                                 date={postData?.date?.seconds}
                                 deleteThis={() => deletePost(postData.id)}
                                 postImg={postData?.postUrl}
-                                hide={handleHide}
-                                show={show}
                                 editThis={()=>{
                                     setIsEditing(postData?.id)
-                                    handleShow()
+                                    modalShow()
                                 }}
-                                 getInput={(e) => { setEditInputTxt(e.target.value) }}
-                                 submitForm={updatePost}
+                                getUpdatedTxt={(e) => { setEditInputTxt(e.target.value) }}
+                                submitUpdate={updatePost}
+                                showModal={updateTxtModal}
+                                hideModal={modalHide}
+                                ModalTitleCreate={"Edit Post"}
+                                ModalBtnSave={"Save"}
+                               
                             />
                         </div>
                     ))

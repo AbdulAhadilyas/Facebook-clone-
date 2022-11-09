@@ -4,7 +4,7 @@ import { useState } from 'react';
 import ModalWin from "./Modal"
 
 
-const Post = ({ postTxt, postImg, date, keyValue, deleteThis, editThis,show, submitForm, hide, getInput, setImage }) => {
+const Post = ({ postTxt, postImg, date, keyValue, deleteThis, editThis,showModal, submitUpdate, hideModal, getUpdatedTxt, setUpdateImage ,ModalTitle, ModalBtnSave,ModalTitleCreate}) => {
 
     const [toggleClass, setToggleClass] = useState(false)
     const toggle = () => {
@@ -115,11 +115,13 @@ const Post = ({ postTxt, postImg, date, keyValue, deleteThis, editThis,show, sub
             </div>
 
             <ModalWin
-                show={show}
-                submitForm={submitForm}
-                hide={hide}
-                getInput={getInput}
-                setImage={setImage}
+                show={showModal}
+                submitForm={submitUpdate}
+                hide={hideModal}
+                getInput={getUpdatedTxt}
+                setImage={setUpdateImage}
+                modalTitle={ModalTitleCreate}
+                btnTxt={ModalBtnSave}
             />
 
         </>

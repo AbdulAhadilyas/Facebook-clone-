@@ -31,7 +31,7 @@ justify-content: space-between;
     margin-top: 2px;
     padding: 10px;
     height: 35px;
-    width: 200px;
+    width: 18vw;
     background-color: #3a3b3c;
 }
 .input input{
@@ -40,7 +40,7 @@ justify-content: space-between;
     outline: none;
     font-size: .9rem;
     color: #b0b3b8;
-    width: 100px; 
+    width: 10vw; 
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #b0b3b8;

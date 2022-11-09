@@ -1,0 +1,122 @@
+.modal-content {
+  background-color: #242526;
+  width: 93%;
+}
+
+.modal-header {
+  justify-content: center;
+  border-color: #323232;
+}
+.modal-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #e4e6eb;
+  line-height: 0.5;
+}
+.modal-header .btn-close {
+  border-radius: 50%;
+  filter: invert();
+  background-color: #9393939f;
+}
+textarea {
+  resize: none;
+  background-color: #242526;
+  border: none;
+  font-size: 20px;
+  color: #e4e6eb;
+  height: 88px;
+}
+textarea:focus,
+input:focus {
+  outline: 0;
+}
+.modalemoji {
+  display: flex;
+  justify-content: space-between;
+}
+.image-icon > img {
+  width: 34px;
+}
+.modaliconBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(74, 74, 74);
+  padding: 15px 20px 15px 20px ;
+  margin-top: 10px;
+  border-radius: 10px;
+  color: #e4e6eb;
+  
+}
+.modal-icons{
+  display: flex;
+  align-items: center;
+
+}
+
+.modal-icons {
+ padding-left: 20px;
+ display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-icons svg{
+  width:  20px;
+  height: 20px;
+}
+.icon-box-modal-view{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left:5px;
+  border-radius:100%;
+  padding: 4px;
+  width: 30px;
+  height: 30px;
+  border-radius:100%;
+  transition: 0.2s;
+}
+.icon-box-modal-view:hover{
+  background-color: #3a3939;
+}
+.hiddenInput >svg{
+  fill: #4dbc69;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.people >svg{
+  fill: #2679ee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.smile>svg{
+  fill: #f5b83c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.location>svg{
+  fill: #f15540;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flag>svg{
+  fill:#43afd3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.three-dot>svg{
+  fill:#4a4a4a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hiddenInput >input {
+  display: none;
+}

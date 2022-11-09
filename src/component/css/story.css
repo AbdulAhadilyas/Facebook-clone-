@@ -32,14 +32,14 @@
 }
 .story-box-1 {
   display: flex;
-  width: 36vw;
+  width: 450px;
   height: 33vh;
   margin-top: 10px;
   justify-content: center;
 
 }
 .story {
-  width: 8vw;
+  min-width: 100px;
   height: 28vh;
   margin: 8px 0px 0px 9px;
   border-radius: 10%;

@@ -40,10 +40,9 @@ function Home() {
     const [show, setShow] = useState(false)
     const [uplodImg, setUplodImg] = useState(null)
     const [safeImage, setSafeImage] = useState(null)
-    const [isEditing, setIsEditing] = useState({
-        editingId: null,
-        editingText: ""
-    })
+    const [editInputTxt, setEditInputTxt] = useState("")
+
+     const [isEditing, setIsEditing] = useState("")
 
 
     const handleShow = () => {
@@ -141,16 +140,16 @@ function Home() {
 
     const updatePost = async (e) => {
         e.preventDefault();
-        await updateDoc(doc(db, "posts", isEditing.editingId), {
-            postTxt: isEditing.editingText
+        await updateDoc(doc(db, "posts", isEditing), {
+            postTxt:editInputTxt
         });
-        setIsEditing({
-          editingId: null,
-          editingText: ""
-        })
-      }
-
-
+        // setIsEditing({
+        //     editingId: null,
+        //     editingText: ""
+        // })
+        handleHide()
+    }
+console.log(uplodImg)
     return (
 
         <>
@@ -167,6 +166,7 @@ function Home() {
                         handleShow={handleShow}
                         hide={handleHide}
                         setImage={(e) => setUplodImg(e.target.files[0])}
+                        
                     />
                     {post.map((postData, i) => (
                         <div key={i}>
@@ -175,6 +175,14 @@ function Home() {
                                 date={postData?.date?.seconds}
                                 deleteThis={() => deletePost(postData.id)}
                                 postImg={postData?.postUrl}
+                                hide={handleHide}
+                                show={show}
+                                editThis={()=>{
+                                    setIsEditing(postData?.id)
+                                    handleShow()
+                                }}
+                                 getInput={(e) => { setEditInputTxt(e.target.value) }}
+                                 submitForm={updatePost}
                             />
                         </div>
                     ))

@@ -4,7 +4,14 @@ import { useState } from 'react'
 
 
 
-export default function From({getUserEmail ,getUserPass,createAccount}) {
+export default function From(
+    {getUserEmail 
+    ,getUserPass,
+    createAccount ,
+    singInEmail,
+    singInPass,
+    singInWithEmail
+    }) {
     const [show, setShow] = useState(false)
 
 
@@ -31,26 +38,27 @@ export default function From({getUserEmail ,getUserPass,createAccount}) {
                         <p className="facebook-status">Facebook helps you connect and share with the people in your life.</p>
 
                     </div>
-
+                    <form onSubmit={singInWithEmail}>
                     <div className="main-right">
+                    
 
                         <div className="main-right-login">
 
                             <div className="main-right-email">
 
-                                <input type="email" placeholder="Email address or phone number"/>
+                                <input type="email" placeholder="Email address or phone number" onChange={singInEmail} />
 
                             </div>
 
                             <div className="main-right-password">
 
-                                <input type="password" placeholder="Password"/>
+                                <input type="password" placeholder="Password" onChange={singInPass}/>
 
                             </div>
 
                             <div className="main-right-button">
 
-                                <button>
+                                <button type='submit'>
                                     Log In
                                 </button>
 
@@ -81,6 +89,7 @@ export default function From({getUserEmail ,getUserPass,createAccount}) {
                         </div>
 
                     </div>
+                    </form>
 
                 </div>
               </div>
@@ -134,7 +143,7 @@ export default function From({getUserEmail ,getUserPass,createAccount}) {
           
               <div className="modal-date-birth">
                  
-                 <label for="">Date of birth</label>
+                 <label htmlFor="">Date of birth</label>
                  
                  <div className="modal-date-alert">
                      
@@ -151,7 +160,7 @@ export default function From({getUserEmail ,getUserPass,createAccount}) {
               
               <div className="modal-gender">
                  
-                 <label for="">Gender</label>
+                 <label htmlFor="">Gender</label>
                  
                  <div className="modal-gender-alert">
                      
@@ -165,7 +174,7 @@ export default function From({getUserEmail ,getUserPass,createAccount}) {
                  
                  <div className="modal-gender-name">
                      
-                     <label for="">Femal</label>
+                     <label htmlFor="">Femal</label>
                      
                      <input type="radio"/>
                      
@@ -173,7 +182,7 @@ export default function From({getUserEmail ,getUserPass,createAccount}) {
                  
                  <div className="modal-gender-name">
                      
-                     <label for="">Male</label>
+                     <label htmlFor="">Male</label>
                      
                      <input type="radio"/>
                      
@@ -181,7 +190,7 @@ export default function From({getUserEmail ,getUserPass,createAccount}) {
                  
                  <div className="modal-gender-name">
                      
-                     <label for="">Custom</label>
+                     <label htmlFor="">Custom</label>
                      
                      <input type="radio"/>
                      

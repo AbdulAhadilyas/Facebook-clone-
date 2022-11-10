@@ -1,8 +1,8 @@
 
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import From from './component/Form';
 import { initializeApp } from "firebase/app"
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword ,onAuthStateChanged,signOut} from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDPqtZOv212keJhpLWnuTTWVScLtiaFW3w",
@@ -14,34 +14,79 @@ const firebaseConfig = {
 };
 
 
-
 function App() {
   const app = initializeApp(firebaseConfig);
- 
-  const [email,setEmail] =useState()
-  const [password,setPassword] =useState()
+
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [singEmail, setsingEmail] = useState("")
+  const [singPassword, setSingPassword] = useState("")
+  const [isLogin, setisLogin] = useState(false)
 
 
-  const createAccount =  (e) => {
+  const createAccount = (e) => {
+    e.preventDefault()
+    // const auth = getAuth(app);
+    // createUserWithEmailAndPassword(auth, email, password)
+    //   .then((userCredential) => {
+    //     // Signed in 
+    //     const user = userCredential.user;
+    //     // ...
+    //     // console.log(user)
+    //   })
+    //   .catch((error) => {
+    //     const errorCode = error.code;
+    //     const errorMessage = error.message;
+    //     // ..
+    //   });
+    // console.log(email, password)
+  }
+
+
+  const Login = (e) => {
     e.preventDefault()
     const auth = getAuth(app);
-    createUserWithEmailAndPassword(auth, email,password )
+    signInWithEmailAndPassword(auth, singEmail, singPassword)
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
+        // console.log("login")
         // ...
-        console.log(user)
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        // ..
+        console.log( error.message)
       });
-    console.log(email,password)
-   
-  }
+   }
+  useEffect(() => {
+    const auth = getAuth(app);
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const uid = user.uid;
+        setisLogin(true)
+      } else {
+        setisLogin(false)
+      }
+      console.log(isLogin)
+    });
+  }, [])
+
+  
+  
 
  
+const logOut = () =>{
+  const auth = getAuth(app);
+signOut(auth).then(() => {
+  // Sign-out successful.
+  console.log("logout")
+}).catch((error) => {
+  // An error happened.
+  console.log("faild")
+});
+}
+
 
 
 
@@ -52,13 +97,15 @@ function App() {
       </div>
       <Router/> */}
 
-      <From  getUserEmail={(e)=>setEmail(e.target.value)} 
-       getUserPass={(e)=>setPassword(e.target.value)}
-       createAccount={createAccount}
-      
-      
-      />
+      <From getUserEmail={(e) => setEmail(e.target.value)}
+        getUserPass={(e) => setPassword(e.target.value)}
+        createAccount={createAccount}
+        singInWithEmail={Login}
+        singInEmail={(e) => setsingEmail(e.target.value)}
+        singInPass={(e) => setSingPassword(e.target.value)}
 
+      />
+<button onClick={logOut}>Log Out</button>
     </div>
 
 

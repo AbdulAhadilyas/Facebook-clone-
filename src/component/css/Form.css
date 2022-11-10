@@ -1,0 +1,335 @@
+.container1 {
+  width: 100vw;
+  height: 100%;
+  background-color: #18191a;
+}
+.main {
+  width: 980px;
+  margin: auto;
+  height: 650px;
+  display: flex;
+  padding-top: 100px;
+}
+.main-left {
+  width: 580px;
+  padding: 20px;
+}
+.main-right {
+  width: 400px;
+  height: 450px;
+}
+.facebook-logo {
+  font-size: 55px;
+  font-weight: bold;
+  margin-top: 100px;
+  color: #1877f2;
+}
+.facebook-status {
+  font-size: 28px;
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+}
+.main-right-login {
+  padding: 20px;
+  background-color: #242526;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.main-right-email {
+  width: 100%;
+  margin-top: 10px;
+}
+.main-right-email input[type="email"] {
+  width: 100%;
+  padding: 9px;
+  font-size: 17px;
+  border: none;
+
+  border-radius: 5px;
+  background-color: #3b3b3b;
+}
+.main-right-password {
+  width: 100%;
+  margin-top: 20px;
+}
+.main-right-password input[type="password"] {
+  width: 100%;
+  padding: 9px;
+  font-size: 17px;
+  border: none;
+
+  border-radius: 5px;
+  background-color: #3b3b3b;
+}
+.main-right-button {
+  width: 100%;
+  margin-top: 20px;
+}
+.main-right-button button {
+  width: 100%;
+  padding: 9px;
+  font-size: 17px;
+  border: none;
+  background-color: #1877f2;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.main-right-link {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+.main-right-link a {
+  font-size: 17px;
+  text-decoration: none;
+  color: #1877f2;
+}
+.main-right-line {
+  width: 100%;
+  height: 1px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+}
+.main-right-account {
+  width: 100%;
+  margin-top: 20px;
+}
+.main-right-account {
+  width: 220px;
+  margin: auto;
+  margin-top: 20px;
+}
+.main-right-account button {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  background-color: #42b72a;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+.main-right-page-link {
+  width: 400px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 17px;
+  color: white;
+}
+.main-right-page-link a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+.main-right-page-link p {
+  margin-left: 5px;
+}
+.footer {
+  background-color: white;
+}
+.footer-link {
+  width: 980px;
+  margin: auto;
+  padding: 20px;
+}
+.footer-link a {
+  text-decoration: none;
+  padding: 2px;
+  color: #8a8d91;
+}
+.facebook-2020 {
+  width: 980px;
+  margin: auto;
+  padding: 20px;
+}
+.facebook-2020 a {
+  text-decoration: none;
+  padding: 2px;
+  color: #8a8d91;
+}
+.modal-show{
+  width: 100%;
+  height: 130vh;
+  position: fixed;
+  top:-90px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(41, 40, 40, 0.342);
+}
+.modal-hide{
+  display: none;
+}
+.modal-signup {
+  width: 100%;
+  max-width: 35%;
+  margin: auto;
+  height: 500px;
+  margin-top: 100px;
+  background-color: #242526;
+  position: relative;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+.modal-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  color: #aaa;
+  cursor: pointer;
+}
+.modal-signup-heading {
+  width: 100%;
+  margin-top: 5px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.modal-signup-heading .modal-signup-name {
+  font-size: 30px;
+  font-weight: bold;
+}
+.modal-signup-heading .modal-signup-child-name {
+  font-size: 17px;
+  margin-top: 5px;
+}
+.modal-signup-name {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.modal-signup-name input[type="text"] {
+  width: 48%;
+  padding: 8px;
+  font-size: 17px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  background-color: rgb(68, 68, 68);
+}
+
+.modal-signup-email {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+}
+.modal-signup-email input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 17px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  background-color: rgb(68, 68, 68);
+}
+
+.modal-signup-password {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+}
+.modal-signup-password input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 17px;
+  border: none;
+color: white;
+  border-radius: 5px;
+  background-color: rgb(68, 68, 68);
+}
+.modal-date-birth {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.modal-date-alert {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-color: #aaa;
+  font-size: 12px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  margin-left: 3px;
+}
+.modal-date-selection {
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.select-choice {
+  width: 33%;
+}
+.select-choice select {
+  width: 96%;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 17px;
+  border: none;
+  border: 1px solid #ccc;
+  color: #080808;
+}
+.modal-gender {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.modal-gender-alert {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-color: #aaa;
+  font-size: 12px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  margin-left: 3px;
+}
+.modal-gender-choice {
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.modal-gender-name {
+  width: 32%;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-signup-terms {
+  width: 100%;
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.modal-signup-button {
+  width: 100%;
+  max-width: 200px;
+  margin: auto;
+  margin-top: 20px;
+}
+.modal-signup-button > button {
+  width: 100%;
+  padding: 10px;
+  background-color: #32cd32;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}

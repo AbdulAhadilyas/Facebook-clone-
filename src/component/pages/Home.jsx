@@ -29,13 +29,21 @@ const firebaseConfig = {
     appId: "1:522092146348:web:8eac12cfa43506ee4db909"
 
 };
+// const firebaseConfig = {
+//     apiKey: "AIzaSyDPqtZOv212keJhpLWnuTTWVScLtiaFW3w",
+//     authDomain: "fakeb00k-01.firebaseapp.com",
+//     projectId: "fakeb00k-01",
+//     storageBucket: "fakeb00k-01.appspot.com",
+//     messagingSenderId: "810198591603",
+//     appId: "1:810198591603:web:a049dea4189b1a63c86206"
+//   };
 
 
 function Home() {
     const app = initializeApp(firebaseConfig);
 
     const db = getFirestore(app);
-    const [inputTxt, setInputTxt] = useState("")
+    const [inputTxt, setInputTxt] = useState()
     const [post, setPost] = useState([])
     const [show, setShow] = useState(false)
     const [uplodImg, setUplodImg] = useState(null)
@@ -71,7 +79,7 @@ function Home() {
             console.log("no file selected")
             try {
                 const docRef = await addDoc(collection(db, "posts"), {
-                    postTxt: inputTxt,
+                    postTxt: inputTxt.toString(),
                     date: serverTimestamp()
                 });
                 console.log("Document written with ID: ", docRef.id);
@@ -176,11 +184,11 @@ function Home() {
                             <Post
                                 postTxt={postData?.postTxt}
                                 date={postData?.date?.seconds}
-                                deleteThis={() => deletePost(postData.id)}
+                                deleteThis={() => deletePost(postData?.id)}
                                 postImg={postData?.postUrl}
                                 editThis={()=>{
                                     setIsEditing(postData?.id)
-                                    modalShow()
+                                    modalShow() 
                                 }}
                                 getUpdatedTxt={(e) => { setEditInputTxt(e.target.value) }}
                                 submitUpdate={updatePost}

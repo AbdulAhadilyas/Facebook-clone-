@@ -26,7 +26,7 @@ export default function From(
     return (
         <>
         <div>
-
+            <form onSubmit={singInWithEmail}>
             <div className="container1">
 
                 <div className="main">
@@ -38,7 +38,7 @@ export default function From(
                         <p className="facebook-status">Facebook helps you connect and share with the people in your life.</p>
 
                     </div>
-                    <form onSubmit={singInWithEmail}>
+    
                     <div className="main-right">
                     
 
@@ -89,15 +89,15 @@ export default function From(
                         </div>
 
                     </div>
-                    </form>
+                 
 
                 </div>
               </div>
    
-             
-        
+              </form>
           </div>
           <div>
+
        <div className={(show)?"modal-show":"modal-hide"}>
        <form onSubmit={createAccount}>
           

@@ -1,8 +1,9 @@
-
 import { useState,useEffect } from 'react';
 import From from './component/Form';
 import { initializeApp } from "firebase/app"
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword ,onAuthStateChanged,signOut} from "firebase/auth";
+import Rout from "./component/Routers/Router" 
+import Nav from "./component/nav" 
 
 const firebaseConfig = {
   apiKey: "AIzaSyDPqtZOv212keJhpLWnuTTWVScLtiaFW3w",
@@ -15,97 +16,97 @@ const firebaseConfig = {
 
 
 function App() {
-  const app = initializeApp(firebaseConfig);
+//   const app = initializeApp(firebaseConfig);
 
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [singEmail, setsingEmail] = useState("")
-  const [singPassword, setSingPassword] = useState("")
-  const [isLogin, setisLogin] = useState(false)
-
-
-  const createAccount = (e) => {
-    e.preventDefault()
-    // const auth = getAuth(app);
-    // createUserWithEmailAndPassword(auth, email, password)
-    //   .then((userCredential) => {
-    //     // Signed in 
-    //     const user = userCredential.user;
-    //     // ...
-    //     // console.log(user)
-    //   })
-    //   .catch((error) => {
-    //     const errorCode = error.code;
-    //     const errorMessage = error.message;
-    //     // ..
-    //   });
-    // console.log(email, password)
-  }
+//   const [email, setEmail] = useState("")
+//   const [password, setPassword] = useState("")
+//   const [singEmail, setSingEmail] = useState("")
+//   const [singPassword, setSingPassword] = useState("")
+//   const [isLogin, setIsLogin] = useState(false)
 
 
-  const Login = (e) => {
-    e.preventDefault()
-    const auth = getAuth(app);
-    signInWithEmailAndPassword(auth, singEmail, singPassword)
-      .then((userCredential) => {
-        // Signed in 
-        const user = userCredential.user;
-        // console.log("login")
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log( error.message)
-      });
-   }
-  useEffect(() => {
-    const auth = getAuth(app);
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        const uid = user.uid;
-        setisLogin(true)
-      } else {
-        setisLogin(false)
-      }
-      console.log(isLogin)
-    });
-  }, [])
-
-  
-  
-
- 
-const logOut = () =>{
-  const auth = getAuth(app);
-signOut(auth).then(() => {
-  // Sign-out successful.
-  console.log("logout")
-}).catch((error) => {
-  // An error happened.
-  console.log("faild")
-});
-}
+//   const createAccount = (e) => {
+//     e.preventDefault()
+//     const auth = getAuth(app);
+//     createUserWithEmailAndPassword(auth, email, password)
+//       .then((userCredential) => {
+//         // Signed in 
+//         const user = userCredential.user;
+//         // ...
+//         // console.log("account created", user)
+//       })
+//       .catch((error) => {
+//         const errorCode = error.code;
+//         const errorMessage = error.message;
+//         console.log(errorCode, errorMessage)
+//         // ..
+//       });
+//     console.log(email, password)
+//   }
 
 
+//   const Login = (e) => {
+//     e.preventDefault()
+//     const auth = getAuth();
+//     signInWithEmailAndPassword(auth, singEmail, singPassword)
+//       .then((userCredential) => {
+//         // Signed in 
+//         const user = userCredential.user;
+//         console.log("login")
+//       })
+//       .catch((error) => {
+//         const errorCode = error.code;
+//         const errorMessage = error.message;
+//         console.log( error.message)
+//       });
+//     console.log(singEmail,singPassword)
+//    }
 
+//   useEffect(() => {
+//     const auth = getAuth();
+//     const unSubscribe =onAuthStateChanged(auth, (user) => {
+//       if (user) {
+//         const uid = user.uid;
+//         setIsLogin(true)
+//         console.log("user is login", user)
+//       } else {
+//         setIsLogin(false)
+//       }
+//     });
+//     return ()=>{
+//       unSubscribe()
+//       console.log("clean up")
+//     }
+//   }, [])
+
+
+// const logOut = () =>{
+//   const auth = getAuth();
+// signOut(auth).then(() => {
+//   // Sign-out successful.
+//   console.log("logout")
+// }).catch((error) => {
+//   // An error happened.
+//   console.log("failed")
+// });
+// }
 
   return (
     <div>
-      {/* <div className="nav">
+      <div className="nav">
         <Nav />
       </div>
-      <Router/> */}
+      <Rout/>
 
-      <From getUserEmail={(e) => setEmail(e.target.value)}
+      {/* <From getUserEmail={(e) => setEmail(e.target.value)}
         getUserPass={(e) => setPassword(e.target.value)}
-        createAccount={createAccount}
+        singInEmail={(e) =>setSingEmail(e.target.value)}
+        singInPass={(e) =>setSingPassword(e.target.value)}
         singInWithEmail={Login}
-        singInEmail={(e) => setsingEmail(e.target.value)}
-        singInPass={(e) => setSingPassword(e.target.value)}
+        createAccount={createAccount}
 
-      />
-<button onClick={logOut}>Log Out</button>
+        />
+     <button onClick={logOut}>logOut</button> */}
     </div>
 
 
